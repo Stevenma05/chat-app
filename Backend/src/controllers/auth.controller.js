@@ -48,7 +48,8 @@ export const signup = async (req, res) => {
 }
 
 export const login = (req, res) => {
-    res.send("login route");
+    const { email, password } = req.body;
+    
 }
 
 export const logout = (req, res) => {
