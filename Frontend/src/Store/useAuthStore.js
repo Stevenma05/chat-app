@@ -50,6 +50,7 @@ export const useAuthStore = create ((set, get) => ({
             toast.success("Logged out successfuly")
             get().disconnectSocket();
         } catch (error) {
+            console.log("Error in logout: ", error);
             toast.error(error.response.data.message);
         }
     },
@@ -103,6 +104,6 @@ export const useAuthStore = create ((set, get) => ({
     },
 
     disconnectSocket: () => {
-        if(get().socket?.connected) get().socket.disconnectSocket();
+        if(get().socket?.connected) get().socket.disconnect();
     },
 }))
