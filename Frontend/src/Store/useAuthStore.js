@@ -5,6 +5,8 @@ import { io } from "socket.io-client";
 
 const BASE_URL = "http://localhost:5001";
 
+
+
 export const useAuthStore = create ((set, get) => ({
     authUser: null,
     isSigningUp: false,
@@ -51,7 +53,11 @@ export const useAuthStore = create ((set, get) => ({
             get().disconnectSocket();
         } catch (error) {
             console.log("Error in logout: ", error);
-            toast.error(error.response.data.message);
+            if (error?.response?.data?.message) {
+                toast.error(error.response.data.message);
+            } else {
+                toast.error("An error happened");
+            }
         }
     },
 

@@ -16,7 +16,7 @@ const App = () => {
   const {authUser, checkAuth, isCheckingAuth, onlineUsers} = useAuthStore()
   const {theme} = useThemeStore();
 
-  console.log(onlineUsers)
+console.log(onlineUsers)
 
   useEffect(() => {
     checkAuth()
@@ -29,6 +29,7 @@ const App = () => {
       <Loader className="size-10 animate-spin"/>
     </div>
   )
+  
 
   return (
   <div data-theme={theme}>
