@@ -13,7 +13,7 @@ const SettingsPage = () => {
   const {theme, setTheme} = useThemeStore();
 
   return (
-    <div className='h-screen container mx-auto px-4 pt-20 max-w-5xl'>
+    <div className='pb-10 container mx-auto px-4 pt-20 max-w-5xl'>
       <div className='space-y-6'>
         <div className='flex flex-col gap-1'>
           <h2 className='text-lg font-semibold'>Theme</h2>
@@ -85,20 +85,20 @@ const SettingsPage = () => {
                 </div>
 
                 {/* Chat Input */}
-                <div className="p-4 border-t border-base-300 bg-base-100">
-                  <div className="flex gap-2">
-                    <input
-                      type="text"
-                      className="input input-bordered flex-1 text-sm h-10"
-                      placeholder="Type a message..."
-                      value="This is a preview"
-                      readOnly
-                    />
-                    <button className="btn btn-primary h-10 min-h-0">
-                      <Send size="18" />
-                    </button>
+                  <div className="p-4 border-t border-base-300 bg-base-100">
+                    <div className="flex gap-2">
+                      <input
+                        type="text"
+                        className="input input-bordered flex-1 text-sm h-10"
+                        placeholder="Type a message..."
+                        value="This is a preview"
+                        readOnly
+                      />
+                      <button className="btn btn-primary h-10 min-h-0">
+                        <Send size={18} />
+                      </button>
+                    </div>
                   </div>
-                </div>
               </div>
             </div>
           </div>
