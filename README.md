@@ -83,8 +83,3 @@ The backend includes an `.env.template` file with the following variables:
 | `CLOUDINARY_API_SECRET` | Cloudinary API secret |
 
 Copy the template to `Backend/.env` and provide your own configuration values. Keep credentials out of version control.
-
-## Contributors
-
-- [Steven Abdalla](https://github.com/Stevenma05)
-- [Eng. Elias](https://github.com/Eng-Elias)
